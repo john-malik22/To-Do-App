@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -9,14 +9,14 @@
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #6790e3, #9b33b5);
-    padding: 10px;
+    padding: 16px;
 }
 
 .todo-app {
     width: 100%;
     max-width: 500px;
     background: #fff;
-    margin: 100px auto 20px;
+    margin: 80px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
@@ -37,30 +37,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     background: #edeef0;
     border-radius: 30px;
-    padding-left: 20px;
+    padding: 8px 8px 8px 20px;
     margin-bottom: 25px;
 }
 
 input {
     flex: 1;
+    min-width: 0;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
-    font-weight: 14px;
+    font-size: 14px;
 }
 
 button {
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 16px 32px;
     background: #ff5945;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    white-space: nowrap;
 }
 
 ul li {
@@ -109,4 +112,67 @@ ul li span {
 
 ul li span:hover {
     background: #edeef0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    .todo-app {
+        margin: 40px auto 16px;
+        padding: 24px 18px 36px;
+        border-radius: 16px;
+    }
+
+    .todo-app h2 {
+        font-size: 1.4rem;
+    }
+
+    .todo-app h2 img {
+        width: 32px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 20px;
+        padding: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding-right: 44px;
+    }
+}
+
+@media (max-width: 380px) {
+    .todo-app {
+        padding: 20px 14px 28px;
+    }
+
+    .todo-app h2 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        font-size: 15px;
+        padding-left: 42px;
+    }
+
+    ul li::before {
+        height: 24px;
+        width: 24px;
+        top: 13px;
+    }
 }
